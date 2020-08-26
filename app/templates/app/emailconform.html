@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if key2 %}
+    <form action="{% url 'conform' %}" method="POST">
+        {% csrf_token %}
+        <center>
+            <h1>PLEASE CONFORM EMAIL</h1>
+                <tr>
+                    <td>
+                        Email
+                    </td>
+                    <td>
+                        <input type="text" name="email" value="{{key2.email}}">
+                    </td>
+                </tr>
+                <tr><br>
+                    
+                    <td>
+                        <input type="submit" value="CONFORM">
+                    </td>
+                </tr>
+            </table>
+        </center>
+        
+    </form>
+    {% endif %}
+</body>
+</html>
